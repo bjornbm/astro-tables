@@ -1,0 +1,27 @@
+Name:                astro-tables
+Version:             0.1
+License:             BSD3
+License-File:        LICENSE
+Copyright:           Bjorn Buckwalter 2008-2009
+Author:              Bjorn Buckwalter 
+Maintainer:          bjorn.buckwalter@gmail.com
+Stability:           Unstable
+Synopsis:            Slow-compiling tables for IAU2000.
+Description:
+    Contains large slow-compiling tables originally in astro. These tables
+    were broken out to allow more rapid modification and recompilation of
+    astro.
+Category:            Physics
+Build-Type:          Simple
+Build-Depends:       base, dimensional
+Exposed-Modules:     IAU2000.Table53
+Extra-source-files:  README,
+                     IAU2000/Parser.hs
+                     IAU2000/tab5.2a.txt
+                     IAU2000/tab5.2b.txt
+                     IAU2000/tab5.2c.txt
+                     IAU2000/tab5.3a.txt
+                     IAU2000/tab5.3b.txt
+                     IAU2000/tab5.4.txt
+                     
+ 
