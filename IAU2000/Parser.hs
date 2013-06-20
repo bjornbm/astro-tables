@@ -71,7 +71,6 @@ printTable53 (ms, phis, epss) = unlines
   , "module IAU2000.Table53 (multipliers, phiCoeffs, epsCoeffs) where"
   , ""
   , "import Numeric.Units.Dimensional.Prelude"
-  , "import Numeric.Units.Dimensional (Dimensional (Dimensional))"
   , "import qualified Prelude"
   , ""
   , "mas :: Floating a => Unit DPlaneAngle a"
