@@ -1,16 +1,22 @@
+{-# LANGUAGE DataKinds #-}
+
 module IAU2000.Table53.PhiCoeffs (phiCoeffs) where
 
 
 import Numeric.Units.Dimensional.Prelude
+import Numeric.Units.Dimensional.UnitNames (atom)
 import qualified Prelude
 
 
-mas :: Floating a => Unit DPlaneAngle a
-mas = milli arcsecond
+mas :: Floating a => Unit 'NonMetric DPlaneAngle a
+-- TODO should arcsecond be metric?
+--mas = milli arcsecond
+mas = mkUnitR (atom "mas" "mas" "milliarssecond") 0.001 arcsecond
 
 -- A Julian century.
-century :: Num a => Unit DTime a
-century = prefix 36525 day
+century :: Num a => Unit 'NonMetric DTime a
+--century = prefix 36525 day
+century = mkUnitZ (atom "cen" "cen" "century") 36525 day
 
 
 -- | Sine and cosine coefficients @(s, s_dot, c')@ for evaluating the
